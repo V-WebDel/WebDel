@@ -1,0 +1,6 @@
+//- mixins добавление изображений через тег <img>
+
+mixin image2x(path, name, type, alt, title)
+  img(src="./img/" + path + name + "." + type srcset="./img/" + path + name + "@2x." + type + " 2x" alt=alt title=title loading="lazy")&attributes(attributes)
+    
+//- +image2x('Путь до изображения', 'Название изображения', 'формат файлов', 'alt', 'title')(class="image")
