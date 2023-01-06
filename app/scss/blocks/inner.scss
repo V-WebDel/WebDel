@@ -1,6 +1,7 @@
 .inner {
   position: relative;
   overflow: hidden;
+  padding-top: 90px;
 
   &--top {
     background-color: $default;
@@ -167,6 +168,8 @@
   }
 
   @include tablets {
+    padding-top: 70px;
+
     &__circle { 
       &--1 {
         bottom: 10%;

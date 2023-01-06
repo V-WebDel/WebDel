@@ -780,6 +780,7 @@ p {
 .inner {
   position: relative;
   overflow: hidden;
+  padding-top: 90px;
 }
 .inner--top {
   background-color: #005792;
@@ -959,6 +960,9 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
+  .inner {
+    padding-top: 70px;
+  }
   .inner__circle--1 {
     bottom: 10%;
     left: -25%;
@@ -1338,8 +1342,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  padding-top: 160px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   overflow: hidden;
 }
 .top__wrap {
@@ -2156,9 +2159,7 @@ p {
 
 .portfolio {
   position: relative;
-  padding-top: 160px;
-  overflow: hidden;
-  background-color: #005792;
+  z-index: 1;
 }
 .portfolio__wrap {
   display: -webkit-box;
@@ -2173,16 +2174,15 @@ p {
   padding: 0;
   list-style: none;
   margin-top: 50px;
+  margin-left: -1rem;
 }
 .portfolio__item {
   position: relative;
   display: block;
-  width: 260px;
-  min-height: 360px;
+  width: 25%;
   overflow: hidden;
-  margin-bottom: 25px;
-  margin-left: 25px;
-  border: 4px solid #4dd6fc;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 .portfolio__item:hover .portfolio__inner {
   -webkit-filter: blur(2px);
@@ -2190,19 +2190,30 @@ p {
 }
 .portfolio__item:hover .portfolio__inner::before {
   height: 100%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
 }
 .portfolio__item:hover .portfolio__name {
   opacity: 1;
 }
 .portfolio__link {
-  display: block;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 100%;
+  border: 4px solid #4dd6fc;
 }
 .portfolio__inner {
   position: relative;
   display: block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #ffffff;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -2247,49 +2258,53 @@ p {
   transition: 0.4s ease;
 }
 @media screen and (max-width: 1200px) {
-  .portfolio__wrap {
-    margin-top: 40px;
-  }
   .portfolio__item {
-    width: 270px;
-    margin-left: 30px;
+    width: 33.33%;
   }
 }
 @media screen and (max-width: 992px) {
   .portfolio__item {
-    width: 220px;
-    min-height: 320px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .portfolio__item:hover .portfolio__inner {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  .portfolio__item:hover .portfolio__inner::before {
+    display: none;
+  }
+  .portfolio__inner {
+    min-height: 510px;
+  }
+  .portfolio__link {
+    border: none;
+  }
+  .portfolio__name {
+    position: static;
+    padding: 0.75rem 1rem;
+    font-size: 18px;
+    color: #ffffff;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
   }
 }
 @media screen and (max-width: 768px) {
-  .portfolio {
-    padding-top: 140px;
-  }
-  .portfolio__item {
-    width: 250px;
-    min-height: 360px;
-    margin-left: 10px;
+  .portfolio__inner {
+    min-height: 370px;
   }
 }
 @media screen and (max-width: 576px) {
-  .portfolio {
-    padding-top: 120px;
-  }
   .portfolio__wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-top: 30px;
+    margin-left: 0;
   }
   .portfolio__item {
-    width: 280px;
-    min-height: 410px;
-    margin-left: 0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
   }
 }
 
@@ -2435,38 +2450,35 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin: 50px auto 0;
+  margin-top: 50px;
+  margin-left: 0.25rem;
 }
 .examples__item {
-  width: calc(33.33% - 2px);
+  width: 33.33%;
   height: auto;
   overflow: hidden;
-}
-@media screen and (max-width: 1200px) {
-  .examples__wrap {
-    width: 100%;
-  }
+  padding-left: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 @media screen and (max-width: 992px) {
   .examples__list {
-    margin: 40px auto 0;
+    margin-top: 40px;
   }
   .examples__item {
-    width: calc(50% - 2px);
+    width: 50%;
   }
 }
 @media screen and (max-width: 576px) {
   .examples__list {
-    margin: 30px auto 0;
+    margin-top: 30px;
+    margin-left: 0;
   }
   .examples__item {
     width: 100%;
+    padding-left: 0;
   }
 }
 
-.example {
-  margin-bottom: 4px;
-}
 .example__link {
   position: relative;
   display: block;
