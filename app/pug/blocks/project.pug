@@ -1,0 +1,30 @@
+section.project.section
+  .container
+    h2.title-text.project__title-text Проект «Петербургская компьютерная помощь»
+    .project__wrap
+
+      .project__block.project__block_left
+        h3.project__title Описание проекта:
+        div.project__text 
+          p Многостраничный сайт для компании по ремонту компьютерной техники «Петербургская компьютерная помощь»
+        h4.project__subtitle Выполненная работа:
+        div.project__text
+          ul
+            li Верстка шаблона с использованием Bootstrap 4
+            li Правки после посадки верстки на CMS WordPress
+            li Наполнение сайта контентом
+            li Добавление новых секций
+        h4.project__subtitle Тип сайта:
+        div.project__text
+          a(href="/") Многостраничный сайт
+        h4.project__subtitle Ссылка на проект:
+        div.project__text
+          a(href="https://pkp-service.ru/") https://pkp-service.ru/
+      
+      .project__block.project__block_center
+        .project__image
+          +image('portfolio/', '2_mobile', 'Макет мобильная версия', '', 'jpg')
+
+      .project__block.project__block_right 
+        .project__image
+          +image('portfolio/', '2_desktop', 'Макет десктопная версия', '', 'jpg')

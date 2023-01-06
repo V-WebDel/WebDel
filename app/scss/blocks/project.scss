@@ -1,0 +1,135 @@
+.project {
+  padding-top: 50px;
+
+  &__title-text {
+    text-transform: none;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  &__block {
+    &_left {
+      width: 48%;
+    }
+    &_center {
+      width: 16%;
+    }
+    &_right {
+      width: 32%;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-family: $font-accent;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: $font-accent;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    margin-left: 30px;
+
+    p {
+      font-size: 18px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      @include lst;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 15px;
+      font-size: 18px;
+      line-height: 1.3;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 7px;
+        height: 7px;
+        background-color: $accent;
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: $font-accent;
+      color: $accent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: darken($accent, 20%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    border: 3px solid $accent;
+  }
+
+  @include laptop {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+
+    &__text {
+      margin-left: 20px;
+
+      p, li {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include tablets {
+    &__wrap {
+      margin-top: 30px;
+    }
+    &__block {
+      &_left {
+        width: 100%;
+      }
+      &_center {
+        display: none;
+      }
+      &_right {
+        width: 100%;
+      }
+    }
+    &__image {
+      max-width: 400px;
+    }
+  }
+}

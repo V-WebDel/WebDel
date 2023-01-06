@@ -1,2 +1,29 @@
 header.header
-  .container
+  .container.container-mobile
+    .header__wrap
+      .logo.header__logo
+        a(href="/").logo__link
+          span.logo__name WebDel
+          span.logo__description Создание сайтов
+      nav.menu.header__menu
+        ul.menu__list
+          li.menu__item
+            a.menu__link(href="resume.html")
+              +svg('business').menu__svg.menu__svg--business
+              span.menu__name Резюме
+          li.menu__item
+            a.menu__link(href="portfolio.html")
+              +svg('briefcas').menu__svg.menu__svg--briefcas
+              span.menu__name Портфолио
+          li.menu__item
+            a.menu__link(href="contacts.html")
+              +svg('contact').menu__svg.menu__svg--contacts
+              span.menu__name Контакты
+
+        button.header__close-menu.close-menu(type="button" aria-label="Закрыть меню" tabindex="4")
+          span.close-menu__line
+          span.IH Закрыть меню
+
+      button.header__open-menu.open-menu(type="button" aria-label="Открыть меню" tabindex="1")
+        span.open-menu__line
+        span.IH Открыть меню

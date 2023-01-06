@@ -19,22 +19,325 @@
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body class="home">
   <div class="wrapper">
-    <header class="header">
-      <div class="container"></div>
-    </header>
-    <main>
+    <div class="inner inner--top">
+      <header class="header">
+        <div class="container container-mobile">
+          <div class="header__wrap">
+            <div class="logo header__logo">
+              <a class="logo__link" href="/">
+                <span class="logo__name">WebDel</span>
+                <span class="logo__description">Создание сайтов</span>
+              </a>
+            </div>
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="resume.html">
+                    <svg class="menu__svg menu__svg--business" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#business"></use>
+                    </svg>
+                    <span class="menu__name">Резюме</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="portfolio.html">
+                    <svg class="menu__svg menu__svg--briefcas" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#briefcas"></use>
+                    </svg>
+                    <span class="menu__name">Портфолио</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="contacts.html">
+                    <svg class="menu__svg menu__svg--contacts" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#contact"></use>
+                    </svg>
+                    <span class="menu__name">Контакты</span>
+                  </a>
+                </li>
+              </ul>
+              <button class="header__close-menu close-menu" type="button" aria-label="Закрыть меню" tabindex="4">
+                <span class="close-menu__line"></span>
+                <span class="IH">Закрыть меню</span>
+              </button>
+            </nav>
+            <button class="header__open-menu open-menu" type="button" aria-label="Открыть меню" tabindex="1">
+              <span class="open-menu__line"></span>
+              <span class="IH">Открыть меню</span>
+            </button>
+          </div>
+        </div>
+      </header>
       <section class="top">
-        <div class="container"></div>
+        <div class="container">
+          <div class="top__wrap">
+            <h1 class="top__title visually-hidden">Портфолио Wordpress-разработчика: создаю посадочные страницы и многостраничные сайты на CMS WordPress. </h1>
+            <p class="top__hello">Добрый день! <span class="text-nowrap">Меня зовут Виктор, и я
+                <br>
+              </span>
+            </p>
+            <p class="top__profession">Wordpress-разработчик</p>
+            <p class="top__text">
+              <span class="text-nowrap">Создаю многостраничные сайты</span>
+              <span class="text-nowrap">и посадочные страницы</span>
+            </p>
+          </div>
+        </div>
       </section>
-      <section class="advantages">
-        <div class="container"></div>
+      <span class="inner__circle inner__circle--1"></span>
+      <span class="inner__circle inner__circle--2"></span>
+      <div class="inner__group inner__group--1">
+        <span class="inner__elem inner__elem--1"></span>
+        <span class="inner__elem inner__elem--2"></span>
+        <span class="inner__elem inner__elem--3"></span>
+        <span class="inner__elem inner__elem--4"></span>
+        <span class="inner__elem inner__elem--5"></span>
+        <span class="inner__elem inner__elem--6"></span>
+      </div>
+      <div class="inner__group inner__group--2">
+        <span class="inner__elem inner__elem--1"></span>
+        <span class="inner__elem inner__elem--2"></span>
+        <span class="inner__elem inner__elem--3"></span>
+        <span class="inner__elem inner__elem--4"></span>
+        <span class="inner__elem inner__elem--5"></span>
+        <span class="inner__elem inner__elem--6"></span>
+      </div>
+      <div class="inner__elem-z inner__elem-z--1"></div>
+      <div class="inner__elem-z inner__elem-z--2"></div>
+      <div class="inner__elem-z inner__elem-z--3"></div>
+      <div class="inner__elem-z inner__elem-z--4"></div>
+      <div class="inner__elem-z inner__elem-z--5"></div>
+      <div class="inner__elem-z inner__elem-z--6"></div>
+    </div>
+    <main>
+      <section class="advantages section" id="advantages">
+        <div class="container">
+          <h2 class="title-text">Преимущества работы со мной</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg class="advantages__svg" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#stopwatch"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <h3 class="advantages__title">Оптимальные сроки</h3>
+                <p class="advantages__text">Не задерживаю сдачи проектов.
+                  <br> Выполняю работы в оговоренные сроки, без потери качества.
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg class="advantages__svg" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#tools"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <h3 class="advantages__title">Актуальные технологии верстки</h3>
+                <p class="advantages__text">При создании сайтов использую HTML5 и CSS3, JavaScript, применяю <span class="text-nowrap">SVG и CSS-анимацию</span>
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg class="advantages__svg" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#responsive"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <h3 class="advantages__title">Aдаптивная верстка</h3>
+                <p class="advantages__text">Делаю качественную верстку сайта для отображения на различных экранах</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg class="advantages__svg" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#support"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <h3 class="advantages__title">Поддержка сайтов</h3>
+                <p class="advantages__text">Оперативно устраняю проблемы. Всегда на связи в Telegram и WhatsApp</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__icon">
+                <svg class="advantages__svg" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#creativity"></use>
+                </svg>
+              </div>
+              <div class="advantages__content">
+                <h3 class="advantages__title">Опыт более 4 лет</h3>
+                <p class="advantages__text">Создание сайтов моя основная деятельность, создано более <span class="text-nowrap">150 сайтов</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section section--accent examples">
+        <div class="container">
+          <h2 class="title-text title-text--reverse">Несколько моих работ</h2>
+          <ul class="examples__list">
+            <li class="examples__item example">
+              <a class="example__link" href="/">
+                <div class="example__image">
+                  <img src="./img/portfolio/1.Изображение сайта" srcset="./img/webp/portfolio/1.webp" alt="" title="jpg" loading="lazy" />
+                </div>
+                <div class="example__name">Многостраничный сайт «Мой&nbsp;сервис»</div>
+              </a>
+            </li>
+            <li class="examples__item example">
+              <a class="example__link" href="/">
+                <div class="example__image">
+                  <img src="./img/portfolio/2.Изображение сайта" srcset="./img/webp/portfolio/2.webp" alt="" title="jpg" loading="lazy" />
+                </div>
+                <div class="example__name">Многостраничный сайт «Мой сервис»</div>
+              </a>
+            </li>
+            <li class="examples__item example">
+              <a class="example__link" href="/">
+                <div class="example__image">
+                  <img src="./img/portfolio/3.Изображение сайта" srcset="./img/webp/portfolio/3.webp" alt="" title="jpg" loading="lazy" />
+                </div>
+                <div class="example__name">Многостраничный сайт «Мой сервис»</div>
+              </a>
+            </li>
+            <li class="examples__item example">
+              <a class="example__link" href="/">
+                <div class="example__image">
+                  <img src="./img/portfolio/4.Изображение сайта" srcset="./img/webp/portfolio/4.webp" alt="" title="jpg" loading="lazy" />
+                </div>
+                <div class="example__name">Многостраничный сайт «Мой сервис»</div>
+              </a>
+            </li>
+            <li class="examples__item example">
+              <a class="example__link" href="/">
+                <div class="example__image">
+                  <img src="./img/portfolio/5.Изображение сайта" srcset="./img/webp/portfolio/5.webp" alt="" title="jpg" loading="lazy" />
+                </div>
+                <div class="example__name">Многостраничный сайт «Мой сервис»</div>
+              </a>
+            </li>
+            <li class="examples__item example">
+              <a class="example__link" href="/">
+                <div class="example__image">
+                  <img src="./img/portfolio/6.Изображение сайта" srcset="./img/webp/portfolio/6.webp" alt="" title="jpg" loading="lazy" />
+                </div>
+                <div class="example__name">Многостраничный сайт «Мой сервис»</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="infographic section">
+        <div class="container">
+          <ul class="infographic__list">
+            <li class="infographic__item">
+              <div class="infographic__icon">
+                <svg aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#project"></use>
+                </svg>
+              </div>
+              <div class="infographic__content">
+                <span class="infographic__title">за <span>3</span> дня</span>
+                <span class="infographic__text">в среднем создаю посадочную страницу</span>
+              </div>
+            </li>
+            <li class="infographic__item">
+              <div class="infographic__icon">
+                <svg aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#cogwheel"></use>
+                </svg>
+              </div>
+              <div class="infographic__content">
+                <span class="infographic__title">за <span>1</span> день</span>
+                <span class="infographic__text">подключаю верстку к CMS WordPress</span>
+              </div>
+            </li>
+            <li class="infographic__item">
+              <div class="infographic__icon">
+                <svg aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#goal"></use>
+                </svg>
+              </div>
+              <div class="infographic__content">
+                <span class="infographic__title">
+                  <span>4</span> года
+                </span>
+                <span class="infographic__text">опыта в веб-разработке</span>
+              </div>
+            </li>
+            <li class="infographic__item">
+              <div class="infographic__icon">
+                <svg aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#profits"></use>
+                </svg>
+              </div>
+              <div class="infographic__content">
+                <span class="infographic__title">больше <span>150</span>
+                </span>
+                <span class="infographic__text">сайтов создано</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__area footer__area_logo">
+            <div class="logo footer__logo">
+              <a class="logo__link" href="/">
+                <span class="logo__name">WebDel</span>
+                <span class="logo__description">Создание сайтов</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__area footer__area_social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="https://tele.click/@viktorkryzhnyi" aria-label="Ссылка на мой Телеграм">
+                  <svg aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#telegramm"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="https://vk.com/v.kryzhny" aria-label="Ссылка на страницу в Вконтакте">
+                  <svg aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="https://wa.me/79500122485" aria-label="Ссылка на мой Whatsapp">
+                  <svg aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__area footer__area_copyright">
+            <span class="footer__copyright">© 2023 Wordpress-разработчик WebDel</span>
+          </div>
+          <div class="footer__area footer__area_links">
+            <a class="footer__link" href="/politica.php" target="_blank">Политика конфиденциальности</a>
+            <a class="footer__link" href="/personal.php" target="_blank">Согласие на обработку персональных данных</a>
+          </div>
+        </div>
+      </div>
     </footer>
+    <div class="btn-up">
+      <svg aria-hidden="true">
+        <use xlink:href="./img/sprite.svg#up-arrow"></use>
+      </svg>
+    </div>
   </div>
   <script src="./js/scripts.min.js"></script>
   <script src="./js/main.js"></script>

@@ -1,0 +1,133 @@
+.portfolio {
+  position: relative;
+  padding-top: 160px;
+  overflow: hidden;
+  background-color: $default;
+
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    @include lst;
+    margin-top: 50px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    width: 260px;
+    min-height: 360px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    border: 4px solid $accent;
+
+    &:hover {
+      
+      .portfolio {
+        &__inner {
+          filter: blur(2px);
+
+          &::before {
+            height: 100%;
+            background: rgba($white, 0.6);
+          }
+        }
+
+        &__name {
+          opacity: 1
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    position: relative;
+    display: block;
+    background-color: $white;
+    transition: all 0.4s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 100%;
+      height: 0;
+      background: rgba($white, 0.1);
+      transform: translate(-50%, -50%);
+      transition: $slowdown;
+    }
+  }
+
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: $font-accent;
+    line-height: 1.2;
+    color: $default;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: $slowdown;
+  }
+
+  @include desktop {
+    &__wrap {
+      margin-top: 40px;
+    }
+
+    &__item {
+      width: 270px;
+      margin-left: 30px;
+    }
+  }
+
+  @include laptop {
+    &__item {
+      width: 220px;
+      min-height: 320px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+  }
+
+  @include tablets {
+    padding-top: 140px;
+
+    &__item {
+      width: 250px;
+      min-height: 360px;
+      margin-left: 10px;
+    }
+  }
+
+  @include phones {
+    padding-top: 120px;
+
+    &__wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      width: 280px;
+      min-height: 410px;
+      margin-left: 0;
+    }
+  }
+}

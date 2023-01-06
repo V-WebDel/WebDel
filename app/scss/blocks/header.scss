@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateY(0);
+  transition: transform $slowdown;
+
+  &--scroll {
+    background-color: $default;
+    box-shadow: $shadow-small;
+  }
+
+  &--hide {
+    box-shadow: none;
+    transform: translateY(-100%);
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  }
+
+  @include tablets {
+    &__wrap {
+      height: 70px;
+    }
+
+    &__menu {
+      transform: translateX(100%);
+      transition: transform $slowdown, background $slowdown;
+
+      &.show {
+        transform: translateX(0);
+      }
+    }
+  }
+}

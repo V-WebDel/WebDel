@@ -1,0 +1,93 @@
+.advantages {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include lst;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 30px 30px 0;
+    padding: 40px 20px;
+    border: 1px solid rgba($white, 0);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
+
+      .advantages__svg {
+        transform: scale(1.4);
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+
+  &__svg {
+    fill: $default;
+    width: 50px;
+    height: 50px;
+    transition: $slowdown;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $font-accent;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+  @include laptop {
+    &__item {
+      margin: 30px 20px 0;
+    }
+  }
+
+  @include tablets {
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    &__item {
+      margin: 0;
+      padding: 30px 20px;
+    }
+  }
+
+  @include phones {
+    &__item {
+      width: 280px;
+      padding: 40px 15px 30px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

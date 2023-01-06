@@ -20,10 +20,20 @@
 // Blocks
 //---------------------------------
 
-@import "blocks/header";
+@import 'blocks/inner';
+@import 'blocks/header';
+@import 'blocks/menu';
 
-@import "blocks/top";
-@import "blocks/advantages";
-@import "blocks/bottom";
+@import 'blocks/top';
+@import 'blocks/advantages';
+@import 'blocks/works';
+@import 'blocks/resume';
+@import 'blocks/infographic';
+@import 'blocks/contacts';
+@import 'blocks/portfolio';
+@import 'blocks/project';
+@import 'blocks/examples';
+@import 'blocks/form';
 
-@import "blocks/footer";
+@import 'blocks/404';
+@import 'blocks/footer';

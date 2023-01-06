@@ -5,17 +5,20 @@ doctype html
 html
   include blocks/head.pug
 
-  body
+  body.home
 
     .wrapper
-      include blocks/header.pug
+      
+      .inner.inner--top
+        include blocks/header.pug
+        include blocks/top.pug
+        include blocks/inner.pug
 
       main
-        include blocks/top.pug
 
         include blocks/advantages.pug
-        
-        include blocks/bottom.pug
+        include blocks/examples.pug
+        include blocks/infographic.pug
 
       include blocks/footer.pug
 

@@ -1,0 +1,201 @@
+.inner {
+  position: relative;
+  overflow: hidden;
+
+  &--top {
+    background-color: $default;
+  }
+
+  &__circle {
+    position: absolute;
+    background-color: $accent;
+    border-radius: 50%;
+    filter: blur(15px);
+    opacity: 0.3;
+  
+    &--1 {
+      bottom: 10%;
+      left: -10%;
+      width: 350px;
+      height: 350px;
+    }
+    &--2 {
+      top: 20%;
+      right: -5%;
+      width: 250px;
+      height: 250px;
+    }
+  }
+  
+  &__group {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  
+    &--1 {
+      bottom: 20%;
+      left: 0;
+    }
+    &--2 {
+      top: 20%;
+      right: 0;
+    }
+  }
+  
+  &__elem {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: $white;
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.2;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    &--1 {
+      animation-name: rotate-1;
+      animation-duration: 15s;
+    }
+  
+    &--2 {
+      animation-name: rotate-2;
+      animation-duration: 20s;
+      animation-delay: -10s;
+    }
+  
+    &--3 {
+      width: 70px;
+      height: 70px;
+      animation-name: rotate-3;
+      animation-duration: 30s;
+    }
+  
+    &--4 {
+      background-color: $accent;
+      animation-name: rotate-2;
+      animation-duration: 25s;
+      animation-delay: -5s;
+    }
+  
+    &--5 {
+      background-color: $accent;
+      animation-name: rotate-3;
+      animation-duration: 40s;
+      animation-delay: -10s;
+    }
+  
+    &--6 {
+      width: 80px;
+      height: 80px;
+      animation-name: rotate-4;
+      animation-duration: 40s;
+    }
+  }
+  
+  &__elem-z {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border-radius: 50%;
+    filter: blur(5px);
+    opacity: 0.2;
+    animation-name: zoom;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+  
+    &--1 {
+      left: 15%;
+      top: 30%;
+    }
+    &--2 {
+      left: 40%;
+      top: 80%;
+      animation-delay: -2s;
+    }
+    &--3 {
+      right: 15%;
+      top: 60%;
+      animation-delay: -4s;
+    }
+    &--4 {
+      right: 40%;
+      top: 80%;
+    }
+    &--5 {
+      left: 5%;
+      top: 10%;
+      width: 30px;
+      height: 30px;
+      animation-delay: -1s;
+    }
+    &--6 {
+      width: 30px;
+      height: 30px;
+      right: 5%;
+      top: 85%;
+      animation-delay: -2s;
+    }
+  }
+
+  @include laptop {
+    &__circle { 
+      &--1 {
+        bottom: 10%;
+        left: -20%;
+        transform: scale(0.8);
+      }
+      &--2 {
+        top: 20%;
+        right: -10%;
+        transform: scale(0.8);
+      }
+    }
+
+    &__group {    
+      &--1 {
+        left: -20%;
+      }
+      &--2 {
+        right: -20%;
+      }
+    }
+  }
+
+  @include tablets {
+    &__circle { 
+      &--1 {
+        bottom: 10%;
+        left: -25%;
+        transform: scale(0.6);
+      }
+      &--2 {
+        top: 20%;
+        right: -20%;
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  @include phones {
+    &__circle { 
+      &--1 {
+        left: -50%;
+      }
+
+      &--2 {
+        display: none;
+      }
+    }
+
+    &__group {
+      &--2 {
+        display: none;
+      }
+    }
+  }
+}

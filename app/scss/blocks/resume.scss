@@ -1,0 +1,181 @@
+.resume {
+  padding-bottom: 60px;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  &__foto {
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  &__info {
+    width: 70%;
+    padding-left: 70px;
+
+    p {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 28px;
+    font-family: $font-accent;
+    line-height: 1;
+  }
+
+  &__text {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  &__skill {
+    margin: 30px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+
+  @include laptop {
+    &__foto {
+      width: 40%;
+    }
+
+    &__info {
+      width: 60%;
+      padding-left: 30px;
+
+      p {
+        margin-bottom: 6px;
+        font-size: 18px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__skill,
+    &__text {
+      margin-left: 30px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+  }
+
+  @include tablets {
+    &__block {
+      flex-direction: column;
+    }
+    &__foto {
+      width: 340px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    &__info {
+      width: 100%;
+    }
+  }
+
+  @include phones {
+    &__block {
+      margin-bottom: 30px;
+    }
+
+    &__foto {
+      width: 250px;
+    }
+
+    &__info {
+      padding-left: 0;
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &__text {
+      margin-left: 0;
+      font-size: 18px;
+    }
+
+    &__skill {
+      margin-left: 0;
+    }
+  }
+}
+
+.skill {
+  &__text {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: $font-default;
+  }
+
+  &__wrap {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: rgba($accent, 0.6);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 19px;
+      width: 6px;
+      transform: translateY(-50%);
+      border-radius: 2px;
+    }
+
+    &::before {
+      left: 0;
+      background-color: $default;
+    }
+
+    &::after {
+      right: 0;
+      background-color: $accent;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    height: 11px;
+    width: 0;
+    background-color: $default;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transform: translateY(-50%);
+  }
+
+  &__count {
+    position: absolute;
+    right: -8px;
+    bottom: -22px;
+    font-size: 16px;
+    font-family: $font-default;
+    color: $default;
+
+    &::before {
+      content: "%";
+      position: absolute;
+      right: -12px;
+      bottom: 0;
+    }
+  }
+}

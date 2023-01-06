@@ -8,10 +8,10 @@ $color-transparent: rgba(255, 255, 255, 0);
 $accent:    #4dd6fc;
 $default:   #005792;
 
-
+$grey:      #cccccc;
 
 // Typography
-$font-accent:   "Nunito", Arial, Helvetica, sans-serif;
+$font-accent:   "Rotonda", Arial, Helvetica, sans-serif;
 $font-default:  "Roboto", Arial, Helvetica, sans-serif;
 
 
@@ -19,3 +19,7 @@ $font-default:  "Roboto", Arial, Helvetica, sans-serif;
 $fastdown:      0.2s ease;
 $middledown:    0.3s ease;
 $slowdown:      0.4s ease;
+
+// Shadows
+$shadow-nano: 0 4px 8px rgba($black, 0.1);
+$shadow-small: 0 8px 16px rgba($black, 0.2);

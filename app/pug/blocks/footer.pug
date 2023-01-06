@@ -1,3 +1,29 @@
 footer.footer
   .container
+    .footer__wrap
+      .footer__area.footer__area_logo
+        .logo.footer__logo
+          a(href="/").logo__link
+            span.logo__name WebDel
+            span.logo__description Создание сайтов
+      .footer__area.footer__area_social.social
+        ul.social__list
+          li.social__item
+            a(href="https://tele.click/@viktorkryzhnyi" aria-label="Ссылка на мой Телеграм")
+              +svg('telegramm')
+          li.social__item
+            a(href="https://vk.com/v.kryzhny" aria-label="Ссылка на страницу в Вконтакте")
+              +svg('vk')
+          li.social__item
+            a(href="https://wa.me/79500122485" aria-label="Ссылка на мой Whatsapp")
+              +svg('whatsapp')
+          
 
+      .footer__area.footer__area_copyright
+        span.footer__copyright © 2023 Wordpress-разработчик WebDel
+      .footer__area.footer__area_links
+        a.footer__link(href="/politica.php" target="_blank") Политика конфиденциальности
+        a.footer__link(href="/personal.php" target="_blank") Согласие на обработку персональных данных
+
+.btn-up
+  +svg('up-arrow')

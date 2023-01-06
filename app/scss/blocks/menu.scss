@@ -1,0 +1,247 @@
+.menu {
+  &_hidden {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    @include lst;
+  }
+
+  &__item {
+    min-width: 110px;
+    margin: 0 10px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    font-size: 13px;
+    font-family: $font-accent;
+    color: $white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+
+    &:hover {
+      text-decoration: none;
+
+      .menu__svg {
+        transform: scale(1.2);
+      }
+    }
+
+    &:active {
+      color: darken($white, 20%);
+
+      .menu__svg {
+        fill: darken($white, 20%);
+      }
+    }
+  }
+
+  &__svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    fill: $white;
+    transition: all 0.3s ease;
+
+    &--business {
+      width: 28px;
+    }
+  }
+
+  &__name {
+    transition: $slowdown;
+  }
+
+  @include laptop {
+    &__item {
+      min-width: 70px;
+      margin: 0 8px;
+    }
+
+    &__link {
+      font-size: 12px;
+
+      &:hover {
+        .menu__svg {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &__svg {
+      margin-bottom: 5px;
+      transform: scale(0.9);
+    }
+  }
+
+  @include tablets {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 2rem;
+    background-color: $default;
+
+    &__list {
+      flex-direction: column;
+      padding: 10px 0;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__link {
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      &:hover {
+        .menu__name {
+          display: block;
+          transition: all 0.3s linear, opacity 0.4s ease-in;
+        }
+      }
+    }
+
+    &__svg {
+      margin-bottom: 0;
+    }
+
+    &__name {
+      width: auto;
+      margin-left: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+  }
+
+  @include phones {
+    padding: 2rem 1rem;
+  }
+}
+
+.open-menu {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &__line {
+    position: relative;
+    height: 4px;
+    width: 36px;
+    background-color: $white;
+    border-radius: 20px;
+    transition: background-color $fastdown;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      height: 4px;
+      width: 36px;
+      background-color: $white;
+      border-radius: 20px;
+      transform: translateX(-50%);
+      transition: background-color $fastdown;
+    }
+
+    &::before {
+      top: -10px;
+    }
+
+    &::after {
+      bottom: -10px;
+    }
+
+    &:hover {
+      background-color: $grey;
+
+      &::before, &::after {
+        background-color: $grey;
+      }
+    }
+  }
+
+  @include tablets {
+    display: flex;
+  }
+}
+
+.close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  background-color: $white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &__line {
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 0.25rem;
+      width: 1.75rem;
+      background-color: $default;
+      border-radius: 20px;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  @include tablets {
+    display: flex;
+  }
+
+  @include phones {
+    right: 1rem;
+  }
+}

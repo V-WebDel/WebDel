@@ -1,0 +1,36 @@
+section.contacts.section#contacts
+  .container
+    h3.title-text Есть вопросы?
+    .contacts__wrap
+      .contacts__block.contacts__block_list
+        ul.contacts__list
+          li.contacts__item.contacts__item_phone
+            span
+              +svg('smartphone').contacts__svg
+            a(href="tel:89500122485").contacts__link +7 (950) 012-24-85
+          li.contacts__item
+            span
+              +svg('email').contacts__svg
+            | viktor.webdel@gmail.com
+          li.contacts__item
+            span
+              +svg('telegram').contacts__svg
+            | @viktorkryzhnyi
+
+      .contacts__block.contacts__block_form
+        h4.form__title Форма обратной связи
+        form.form.form_callback
+          .form__success
+            span Спасибо за ваш вопрос
+            span Отвечу в ближайшее время
+          .form__wrap
+            label.form__label
+              input.form__field(name="name_user" type="text" placeholder="Ваше имя" required)
+            label.form__label
+              input.form__field(name="phone_user" type="tel" placeholder="Ваш телефон" required)
+            label.form__label
+              textarea.form__textarea(name="text_user" rows="6" placeholder="Ваш вопрос")
+            button.btn.form__btn(type="submit") Отправить 
+            label.form__label.form__label_checkbox
+              input.form__checkbox(type="checkbox" name="checkbox" value="ready" checked required)
+              | Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
