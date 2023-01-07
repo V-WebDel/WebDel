@@ -4,14 +4,6 @@
   &_callback {
     margin: 0 auto;
   }
-  
-  &__title {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 22px;
-    font-family: $font-accent;
-    text-align: center;
-  }
 
   &__wrap {
     display: flex;
@@ -37,26 +29,18 @@
     }
   }
   
-  &__field {
+  &__field, &__textarea {
     width: 100%;
     margin-top: 5px;
-    padding: 12px 15px;
+    padding: 12px;
     font-weight: 500;
     color: darken($default, 10%);
-    border: 2px solid $default;
+    border: 2px solid $light;
     border-radius: 4px;
   }
 
   &__textarea {
-    width: 100%;
     height: 165px;
-    resize: none;
-    margin-top: 5px;
-    padding: 10px 15px;
-    font-weight: 500;
-    color: darken($default, 10%);
-    border: 2px solid $default;
-    border-radius: 4px;
   }
 
   &__btn {

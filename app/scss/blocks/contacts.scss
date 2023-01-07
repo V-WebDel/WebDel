@@ -12,8 +12,7 @@
 
     &_list {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
     }
 
     &_form {
@@ -30,6 +29,14 @@
         transform: translateY(-50%);
       }
     }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: $font-accent;
+    text-align: center;
   }
 
   &__list {
@@ -106,6 +113,7 @@
 
     &__block {
       width: 100%;
+      margin-top: 30px;
 
       &_form {
         &::before {
@@ -114,11 +122,14 @@
       }
     }
 
+    &__title {
+      margin-bottom: 20px;
+    }
+
     &__list {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 0;
     }
 
     &__item {

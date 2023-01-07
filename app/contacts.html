@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Сайт-портфолио Wordpress-разработчика</title>
+  <meta name="description" content="Занимаюсь созданием сайтов на CMS Wordpress, посадочных страниц и многостраничных сайтов по готовым макетам">
+  <meta name="apple-mobile-web-app-title" content="">
+  <meta name="application-name" content="">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#1f1f1f">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="stylesheet" href="./css/styles.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="inner inner--top">
+      <header class="header">
+        <div class="container container-mobile">
+          <div class="header__wrap">
+            <div class="logo header__logo">
+              <a class="logo__link" href="/">
+                <span class="logo__name">WebDel</span>
+                <span class="logo__description">Создание сайтов</span>
+              </a>
+            </div>
+            <nav class="menu header__menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="resume.html">
+                    <svg class="menu__svg menu__svg--business" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#business"></use>
+                    </svg>
+                    <span class="menu__name">Резюме</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="portfolio.html">
+                    <svg class="menu__svg menu__svg--briefcas" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#briefcas"></use>
+                    </svg>
+                    <span class="menu__name">Портфолио</span>
+                  </a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="contacts.html">
+                    <svg class="menu__svg menu__svg--contacts" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#contact"></use>
+                    </svg>
+                    <span class="menu__name">Контакты</span>
+                  </a>
+                </li>
+              </ul>
+              <button class="header__close-menu close-menu" type="button" aria-label="Закрыть меню" tabindex="4">
+                <span class="close-menu__line"></span>
+                <span class="IH">Закрыть меню</span>
+              </button>
+            </nav>
+            <button class="header__open-menu open-menu" type="button" aria-label="Открыть меню" tabindex="1">
+              <span class="open-menu__line"></span>
+              <span class="IH">Открыть меню</span>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main>
+      <section class="section contacts">
+        <div class="container">
+          <h2 class="title-text">Есть вопросы?</h2>
+          <div class="contacts__wrap">
+            <div class="contacts__block contacts__block_list">
+              <h3 class="contacts__title">Форма обратной связи</h3>
+              <ul class="contacts__list">
+                <li class="contacts__item contacts__item_phone">
+                  <span>
+                    <svg class="contacts__svg" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#smartphone"></use>
+                    </svg>
+                  </span>
+                  <a class="contacts__link" href="tel:89500122485">+7 (950) 012-24-85</a>
+                </li>
+                <li class="contacts__item">
+                  <span>
+                    <svg class="contacts__svg" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#email"></use>
+                    </svg>
+                  </span>viktor.webdel@gmail.com
+                </li>
+                <li class="contacts__item">
+                  <span>
+                    <svg class="contacts__svg" aria-hidden="true">
+                      <use xlink:href="./img/sprite.svg#telegram"></use>
+                    </svg>
+                  </span>@viktorkryzhnyi
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__block contacts__block_form">
+              <h3 class="contacts__title">Форма обратной связи</h3>
+              <form class="form form_callback">
+                <div class="form__wrap">
+                  <label class="form__label">
+                    <input class="form__field" name="name_user" type="text" placeholder="Ваше имя" required>
+                  </label>
+                  <label class="form__label">
+                    <input class="form__field" name="phone_user" type="tel" placeholder="Ваш телефон" required>
+                  </label>
+                  <label class="form__label">
+                    <textarea class="form__textarea" name="text_user" rows="6" placeholder="Ваш вопрос"></textarea>
+                  </label>
+                  <button class="btn form__btn" type="submit">Отправить </button>
+                  <label class="form__label form__label_checkbox">
+                    <input class="form__checkbox" type="checkbox" name="checkbox" value="ready" checked required>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__area footer__area_logo">
+            <div class="logo footer__logo">
+              <a class="logo__link" href="/">
+                <span class="logo__name">WebDel</span>
+                <span class="logo__description">Создание сайтов</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__area footer__area_social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a href="https://tele.click/@viktorkryzhnyi" aria-label="Ссылка на мой Телеграм">
+                  <svg aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#telegramm"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="https://vk.com/v.kryzhny" aria-label="Ссылка на страницу в Вконтакте">
+                  <svg aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="https://wa.me/79500122485" aria-label="Ссылка на мой Whatsapp">
+                  <svg aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__area footer__area_copyright">
+            <span class="footer__copyright">© 2023 Wordpress-разработчик WebDel</span>
+          </div>
+          <div class="footer__area footer__area_links">
+            <a class="footer__link" href="/politica.php" target="_blank">Политика конфиденциальности</a>
+            <a class="footer__link" href="/personal.php" target="_blank">Согласие на обработку персональных данных</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="btn-up">
+      <svg aria-hidden="true">
+        <use xlink:href="./img/sprite.svg#up-arrow"></use>
+      </svg>
+    </div>
+  </div>
+  <script src="./js/scripts.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

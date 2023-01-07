@@ -1,8 +1,9 @@
 section.section.contacts
-  .container
-    h3.title-text Есть вопросы?
+  .container 
+    h2.title-text Есть вопросы?
     .contacts__wrap
       .contacts__block.contacts__block_list
+        h3.contacts__title Форма обратной связи
         ul.contacts__list
           li.contacts__item.contacts__item_phone
             span
@@ -18,11 +19,8 @@ section.section.contacts
             | @viktorkryzhnyi
 
       .contacts__block.contacts__block_form
-        h4.form__title Форма обратной связи
+        h3.contacts__title Форма обратной связи
         form.form.form_callback
-          .form__success
-            span Спасибо за ваш вопрос
-            span Отвечу в ближайшее время
           .form__wrap
             label.form__label
               input.form__field(name="name_user" type="text" placeholder="Ваше имя" required)
