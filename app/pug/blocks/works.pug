@@ -1,36 +1,41 @@
 section.section.section--accent.works
   .container
-    h2.title-text.title-text--reverse Несколько моих работ
+    h2.title-text.title-text--reverse Похожие проекты
     .swiper-container.swiper-works
       .swiper-wrapper
         .swiper-slide
           a(href="/").work__item
-            span.work__inner
-              +image('portfolio/', '2', 'Изображение сайта', '', 'jpg')
+            .work__inner
+              img(data-src="./img/portfolio/2.jpg" data-srcset="./img/webp/portfolio/2.webp" class="swiper-lazy")
+              .swiper-lazy-preloader
             span.work__name Многостраничный сайт для компании <span class="text-nowrap">«Мой сервис»</span>
         .swiper-slide
           a(href="/").work__item
-            span.work__inner
-              +image('portfolio/', '10', 'Изображение лендинга', '', 'jpg')
+            .work__inner
+              img(data-src="./img/portfolio/10.jpg" data-srcset="./img/webp/portfolio/10.webp" class="swiper-lazy")
+              .swiper-lazy-preloader
             span.work__name Лендинг для платформы <span class="text-nowrap">«Crazy coin»</span>
         .swiper-slide
           a(href="/").work__item
-            span.work__inner
-              +image('portfolio/', '8', 'Изображение лендинга', '', 'jpg')
+            .work__inner
+              img(data-src="./img/portfolio/8.jpg" data-srcset="./img/webp/portfolio/8.webp" class="swiper-lazy")
+              .swiper-lazy-preloader
             span.work__name Лендинг для компании «Zaмания»
         .swiper-slide
           a(href="/").work__item
-            span.work__inner
-              +image('portfolio/', '12', 'Изображение лендинга', '', 'jpg')
+            .work__inner
+              img(data-src="./img/portfolio/12.jpg" data-srcset="./img/webp/portfolio/12.webp" class="swiper-lazy")
+              .swiper-lazy-preloader
             span.work__name Лендинг по ринопластике
         .swiper-slide
           a(href="/").work__item
-            span.work__inner
-              +image('portfolio/', '1', 'Изображение сайта', '', 'jpg')
-            span.work__name Многостраничный сайт проект для компании<br> «Петербургская компьютерная помощь»</span>
+            .work__inner
+              img(data-src="./img/portfolio/1.jpg" data-srcset="./img/webp/portfolio/1.webp" class="swiper-lazy")
+              .swiper-lazy-preloader
+            span.work__name «Петербургская компьютерная помощь»</span>
 
       .swiper-button-prev
-        +svg('back')
+        +svg('arrow')
       .swiper-button-next
-        +svg('back')
+        +svg('arrow')
       .swiper-pagination

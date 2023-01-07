@@ -97,12 +97,21 @@ p {
     background-color: $default;
   }
 
+  &--full {
+    flex: 1;
+    padding: 80px 0;
+  }
+
   @include laptop {
     padding: 60px 0;
   }
 
   @include tablets {
     padding: 40px 0;
+
+    &--full {
+      padding: 40px 0;
+    }
   }
 }
 

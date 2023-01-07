@@ -9,12 +9,13 @@ html
 
     .wrapper
       
-      .inner.inner--top.inner--full
+      .inner.inner--top
         include blocks/header.pug
-        include blocks/portfolio.pug
-        include blocks/inner.pug
+        //- include blocks/inner.pug
 
       main
+        include blocks/project.pug
+        include blocks/works.pug
         include blocks/infographic.pug
 
       include blocks/footer.pug

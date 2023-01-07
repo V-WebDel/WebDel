@@ -1,11 +1,17 @@
 .inner {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   padding-top: 90px;
 
   &--top {
     background-color: $default;
   }
+
+  &--full {
+    height: 100vh;
+  }  
 
   &__circle {
     position: absolute;

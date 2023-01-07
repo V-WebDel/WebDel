@@ -1,4 +1,5 @@
 .project {
+  min-height: calc(100vh - 80px);
   padding-top: 50px;
 
   &__title-text {
@@ -14,13 +15,13 @@
 
   &__block {
     &_left {
-      width: 48%;
+      width: 46%;
     }
     &_center {
-      width: 16%;
+      width: 34%;
     }
     &_right {
-      width: 32%;
+      width: 18%;
     }
   }
 
@@ -29,6 +30,13 @@
     margin-bottom: 10px;
     font-size: 28px;
     font-family: $font-accent;
+    letter-spacing: 1px;
+
+    &--screen {
+      margin-bottom: 0.5rem;
+      font-size: 18px;
+      white-space: nowrap;
+    }
   }
 
   &__subtitle {
@@ -36,6 +44,7 @@
     margin-bottom: 10px;
     font-size: 24px;
     font-family: $font-accent;
+    letter-spacing: 1px;
   }
 
   &__text {
@@ -86,14 +95,84 @@
     }
   }
 
+  &__design {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    
+  }
+
   &__image {
-    margin: 0 auto;
+    overflow: hidden;
     border: 3px solid $accent;
+    transition: transform $fastdown;
+
+    &--mobile {
+      height: 380px;
+    }
+
+    &--desktop {
+      height: 250px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: $accent;
+    transition: background-color $fastdown;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $white;
+      transition: opacity $fastdown;
+    }
+
+    &:hover {
+      background-color: rgba($accent, 0.75);
+    }
+
+    &--up {
+      svg {
+        transform: scale(-1, -1);
+      }
+    }
   }
 
   @include laptop {
+    &__block {
+      &_left {
+        width: 100%;
+      }
+      &_center, &_right {
+        width: 50%;
+        padding-right: 10px;
+      }
+    }
+
+    &__design {
+      &--desktop {
+        max-width: 340px;
+      }
+
+      &--mobile {
+        max-width: 200px;
+      }
+    }
+
     &__title {
       font-size: 24px;
+
+      &--screen {
+        font-size: 20px;
+      }
     }
 
     &__subtitle {
@@ -114,22 +193,21 @@
   }
 
   @include tablets {
+
     &__wrap {
       margin-top: 30px;
     }
+
     &__block {
-      &_left {
+      &_center, &_right {
         width: 100%;
-      }
-      &_center {
-        display: none;
-      }
-      &_right {
-        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 0;
       }
     }
-    &__image {
-      max-width: 400px;
+
+    &__design {
+      margin: 0 auto;
     }
   }
 }

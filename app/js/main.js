@@ -142,10 +142,84 @@ window.addEventListener('scroll', function () {
 });
 
 
+/* Анимация изображения макета на странице Проект */
+const projectDesigns = document.querySelectorAll('.project__design');
+
+if (projectDesigns.length > 0) {
+
+  window.onload = function(){
+
+    projectDesigns.forEach(item => {
+      const itemWrapHeight = item.querySelector('.project__image').clientHeight;
+      
+      const itemBtnUp = item.querySelector('.project__btn--up');
+      const itemBtnDown = item.querySelector('.project__btn--down');
+
+      const itemImage = item.querySelector('img');
+      const itemImageClient = itemImage.getBoundingClientRect();
+      const itemImageHeight = itemImageClient.height;
+
+
+      let startPos = 0;
+      let motion = null;
+      let motionOver = null;
+
+      function motionUp() {
+        if(startPos <= 0) {
+          startPos = startPos + 1;
+          itemImage.style.transform = `translateY(${startPos}px)`;
+        }
+      }
+
+      function motionDown() {
+        if(Math.abs(startPos) <= (itemImageHeight - itemWrapHeight)) {
+          startPos = startPos - 1;
+          itemImage.style.transform = `translateY(${startPos}px)`;
+        }
+      }
+
+      itemBtnUp.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+        motion = setInterval(motionUp, 5);
+      });
+      itemBtnUp.addEventListener('mouseup', () => {
+        clearInterval(motion);
+      });
+
+      itemBtnDown.addEventListener('mousedown', (event) => {
+        event.preventDefault();
+        motion = setInterval(motionDown, 5);
+      });
+      itemBtnDown.addEventListener('mouseup', () => {
+        clearInterval(motion);
+      });
+
+      itemBtnUp.addEventListener('mouseover', (event) => {
+        event.preventDefault();
+        motionOver = setInterval(motionUp, 5);
+      });
+      itemBtnUp.addEventListener('mouseout', () => {
+        clearInterval(motionOver);
+      });
+
+      itemBtnDown.addEventListener('mouseover', (event) => {
+        event.preventDefault();
+        motionOver = setInterval(motionDown, 5);
+      });
+      itemBtnDown.addEventListener('mouseout', () => {
+        clearInterval(motionOver);
+      });
+    });
+  
+  };
+}
+
+
+
 /* GSAP animation */
 if (body.classList.contains('home')) {
 
-  var tl = gsap.timeline();
+  let tl = gsap.timeline();
   tl.from(".top__hello", {duration: 0.7, delay: 1, opacity: 0, y: 70, ease: "power1"});
   tl.from(".top__profession", {duration: 0.6, opacity: 0, y: 70, ease: "power1"});
   tl.from(".top__text", {duration: 0.6, opacity: 0, y: 70, ease: "power1"});
@@ -210,13 +284,21 @@ if (body.classList.contains('page-portfolio')) {
 }
 
 // Swiper Works
-var swiper_works = new Swiper('.swiper-works', {
-  speed: 1000,
-  spaceBetween: 0,
+let swiper_works = new Swiper('.swiper-works', {
+  spaceBetween: 10,
+  touchRatio: 1,
+  lazyLoading: true,
+  observer: true,
+  observeParents: true,
   loop: true,
+  speed: 1000,
 
   autoplay: {
     delay: 5000,
+  },
+
+  lazy: {
+    loadPrevNext: true,
   },
 
   navigation: {
