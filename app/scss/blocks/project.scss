@@ -88,7 +88,7 @@
       text-decoration: none;
       transition: all 0.3s ease;
 
-      &:hover {
+      &:hover, &:focus {
         color: darken($accent, 20%);
         text-decoration: none;
       }

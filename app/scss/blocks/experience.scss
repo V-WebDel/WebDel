@@ -1,0 +1,192 @@
+.experience {
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $light;
+    }
+  }
+
+  &__block {
+    padding-top: 2rem;
+
+    &--main {
+      width: 35%;
+      padding-right: 2rem;
+      font-family: $font-accent;
+      border-right: 1px solid $light;
+    }
+
+    &--duties {
+      width: 65%;
+      padding-left: 2rem;
+    }
+  }
+
+  &__time {
+    font-size: 18px;
+  }
+
+  &__company {
+    margin-bottom: 1.5rem;
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  &__post {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__content {
+    margin-bottom: 2rem;
+    font-size: 20px;
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      @include lst;
+      margin-bottom: 2rem;
+  
+      li {
+        position: relative;
+        padding-left: 1rem;
+  
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+  
+        &::before {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 6px;
+          height: 6px;
+          background-color: $default;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__links {
+    @include lst;
+    margin-bottom: 2rem;
+    font-size: 20px;
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        font-weight: 700;
+        font-family: $font-accent;
+        color: $accent;
+
+        &:hover, &:focus {
+          color: darken($accent, 20%);
+        }
+      }
+    }
+  }
+
+  @include laptop {
+
+    &__block {
+      padding-top: 1.5rem;
+
+      &--main {
+        width: 40%;
+        padding-right: 1.5rem;
+        border-right: none;
+      }
+  
+      &--duties {
+        width: 60%;
+        padding-left: 1.5rem;
+      }
+    }
+
+    &__time {
+      font-size: 16px;
+    }
+  
+    &__company {
+      margin-bottom: 1rem;
+      font-size: 32px;
+    }
+  
+    &__post {
+      margin-bottom: 1rem;
+      font-size: 20px;
+    }
+  
+    &__content, &__links {
+      margin-bottom: 1rem;
+      font-size: 18px;
+    }
+  }
+
+  @include tablets {
+    &__wrap {
+      margin-top: 20px;
+    }
+
+    &__row {
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+    }
+
+    &__block {
+      padding-top: 1.5rem;
+
+      &--main {
+        width: 100%;
+        padding-right: 0;
+      }
+  
+      &--duties {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    &__content {
+      p {
+        margin-bottom: 1rem;
+      } 
+
+      ul {
+        margin-bottom: 1rem;
+        
+        li {
+          &:not(:last-child) {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+
+    &__links {
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

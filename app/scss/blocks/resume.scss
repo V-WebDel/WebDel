@@ -1,6 +1,4 @@
 .resume {
-  padding-bottom: 60px;
-
   &__block {
     display: flex;
     justify-content: space-between;
@@ -16,10 +14,10 @@
   &__info {
     width: 70%;
     padding-left: 70px;
+    font-size: 22px;
 
     p {
       margin-bottom: 10px;
-      font-size: 20px;
     }
   }
 
@@ -32,17 +30,31 @@
     line-height: 1;
   }
 
-  &__text {
-    margin-left: 50px;
+  &__content {
+    margin-left: 30px;
     margin-bottom: 10px;
     font-size: 22px;
-  }
 
-  &__skill {
-    margin: 30px;
-    margin-left: 50px;
-    margin-bottom: 40px;
-    margin-right: 0;
+    ul {
+      @include lst;
+
+      li { 
+        position: relative;
+        margin-bottom: 0.25rem;
+        padding-left: 1rem;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 12px;
+          left: 0;
+          height: 6px;
+          width: 6px;
+          background-color: $default;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 
   @include laptop {
@@ -64,118 +76,38 @@
       font-size: 24px;
     }
 
-    &__skill,
-    &__text {
-      margin-left: 30px;
-    }
-
-    &__text {
+    &__content {
       font-size: 20px;
     }
   }
 
   @include tablets {
+    padding-bottom: 20px;
+
     &__block {
       flex-direction: column;
+      margin-bottom: 30px;
     }
     &__foto {
       width: 340px;
-      margin: 0 auto;
       margin-bottom: 20px;
     }
     &__info {
       width: 100%;
+      padding-left: 0;
+    }
+    &__content {
+      margin-left: 0;
     }
   }
 
   @include phones {
-    &__block {
-      margin-bottom: 30px;
-    }
-
     &__foto {
-      width: 250px;
+      max-width: 100%;
     }
 
-    &__info {
-      padding-left: 0;
-
-      p {
-        font-size: 16px;
-      }
-    }
-
-    &__text {
-      margin-left: 0;
+    &__content {
       font-size: 18px;
-    }
-
-    &__skill {
-      margin-left: 0;
-    }
-  }
-}
-
-.skill {
-  &__text {
-    margin-bottom: 15px;
-    font-size: 20px;
-    font-family: $font-default;
-  }
-
-  &__wrap {
-    position: relative;
-    height: 4px;
-    width: 100%;
-    margin-bottom: 30px;
-    background-color: rgba($accent, 0.6);
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      height: 19px;
-      width: 6px;
-      transform: translateY(-50%);
-      border-radius: 2px;
-    }
-
-    &::before {
-      left: 0;
-      background-color: $default;
-    }
-
-    &::after {
-      right: 0;
-      background-color: $accent;
-    }
-  }
-
-  &__line {
-    position: absolute;
-    top: 50%;
-    height: 11px;
-    width: 0;
-    background-color: $default;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    transform: translateY(-50%);
-  }
-
-  &__count {
-    position: absolute;
-    right: -8px;
-    bottom: -22px;
-    font-size: 16px;
-    font-family: $font-default;
-    color: $default;
-
-    &::before {
-      content: "%";
-      position: absolute;
-      right: -12px;
-      bottom: 0;
     }
   }
 }
