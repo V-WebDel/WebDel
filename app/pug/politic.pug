@@ -1,0 +1,21 @@
+include mixins/mixins.pug
+
+doctype html
+
+html
+  include blocks/head.pug
+
+  body
+
+    .wrapper
+      
+      .inner.inner--top
+        include blocks/header.pug
+
+      main
+        include blocks/politic.pug
+
+      include blocks/footer.pug
+
+    script(src="./js/scripts.min.js")
+    script(src="./js/main.js")

@@ -1,0 +1,72 @@
+.politic {
+
+  &__wrap {
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  ol {
+    @include lst;
+    counter-reset: li;
+    
+    font-family: $font-accent;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+
+    li {
+      margin-bottom: 1.5rem;
+      &::before {
+        counter-increment: li; 
+	      content: counters(li,".") ". ";
+      }
+
+      ol {
+        margin-top: 0.5rem;
+        font-family: $font-default;
+        font-size: 20px;
+        text-align: left;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          ol {
+            font-weight: 400;
+          }
+        }
+      }
+
+      ul {
+        @include lst;
+        margin-top: 0.5rem;
+        font-weight: 400;
+
+        li {
+          position: relative;
+          padding-left: 2rem;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            width: 5px;
+            height: 5px;
+            background-color: $default;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+
+  @include tablets {
+    p {
+      font-size: 16px;
+    }
+  }
+}

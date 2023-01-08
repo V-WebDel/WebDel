@@ -2899,6 +2899,13 @@ p {
 }
 
 .error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   width: 100vw;
   overflow: hidden;
   background-color: #005792;
@@ -2915,14 +2922,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 600px;
-  padding-bottom: 50px;
   text-align: center;
 }
 .error__title {
   margin-bottom: 30px;
   font-weight: 700;
-  font-size: 110px;
+  font-size: 90px;
   font-family: "Rotonda", Arial, Helvetica, sans-serif;
   line-height: 1;
 }
@@ -2931,12 +2936,8 @@ p {
   font-weight: 700;
   font-size: 24px;
   font-family: "Rotonda", Arial, Helvetica, sans-serif;
-  line-height: 1;
 }
 @media screen and (max-width: 992px) {
-  .error {
-    min-height: 550px;
-  }
   .error__title {
     margin-bottom: 20px;
     font-size: 80px;
@@ -2955,15 +2956,74 @@ p {
   }
 }
 @media screen and (max-width: 576px) {
-  .error__wrap {
-    min-height: 500px;
-  }
   .error__title {
     margin-bottom: 10px;
     font-size: 44px;
   }
   .error__text {
     font-size: 18px;
+  }
+}
+
+.politic__wrap {
+  margin-top: 40px;
+}
+.politic p {
+  font-size: 20px;
+}
+.politic ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: li;
+  font-family: "Rotonda", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+.politic ol li {
+  margin-bottom: 1.5rem;
+}
+.politic ol li::before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+.politic ol li ol {
+  margin-top: 0.5rem;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: left;
+}
+.politic ol li ol li {
+  margin-bottom: 0.5rem;
+}
+.politic ol li ol li ol {
+  font-weight: 400;
+}
+.politic ol li ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+.politic ol li ul li {
+  position: relative;
+  padding-left: 2rem;
+}
+.politic ol li ul li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  width: 5px;
+  height: 5px;
+  background-color: #005792;
+  border-radius: 50%;
+}
+@media screen and (max-width: 768px) {
+  .politic p {
+    font-size: 16px;
   }
 }
 
