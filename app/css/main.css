@@ -802,7 +802,7 @@ p {
   background-color: #005792;
 }
 .inner--full {
-  height: 100vh;
+  min-height: 100vh;
 }
 .inner__circle {
   position: absolute;
@@ -1469,7 +1469,7 @@ p {
   -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
 }
-.advantages__item:hover .advantages__svg {
+.advantages__item:hover .advantages__icon svg, .advantages__item:hover .advantages__icon img {
   -webkit-transform: scale(1.4);
       -ms-transform: scale(1.4);
           transform: scale(1.4);
@@ -1488,8 +1488,15 @@ p {
   height: 50px;
   margin-bottom: 30px;
 }
-.advantages__svg {
+.advantages__icon svg {
   fill: #005792;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.advantages__icon img {
   width: 50px;
   height: 50px;
   -webkit-transition: 0.4s ease;
@@ -1561,7 +1568,7 @@ p {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 .works .swiper-slide {
   display: -webkit-box;
@@ -1574,7 +1581,7 @@ p {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
-  height: 100%;
+  height: auto;
 }
 .works .swiper-button-next, .works .swiper-button-prev {
   top: auto;
@@ -1659,13 +1666,10 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 100%;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 1rem;
   border: 4px solid #4dd6fc;
 }
 .work__item:hover .work__inner {
@@ -1683,9 +1687,7 @@ p {
 .work__inner {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
+  padding-top: 150%;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -1705,6 +1707,16 @@ p {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+.work__inner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .work__name {
   position: absolute;
@@ -1941,6 +1953,8 @@ p {
 .portfolio__inner {
   position: relative;
   display: block;
+  height: 100%;
+  min-height: 380px;
   background-color: #ffffff;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -1961,6 +1975,9 @@ p {
   -webkit-transition: 0.4s ease;
   -o-transition: 0.4s ease;
   transition: 0.4s ease;
+}
+.portfolio__inner img {
+  height: 100%;
 }
 .portfolio__name {
   position: absolute;
@@ -1987,6 +2004,9 @@ p {
 @media screen and (max-width: 1200px) {
   .portfolio__item {
     width: 33.33%;
+  }
+  .portfolio__inner {
+    min-height: 430px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -2068,9 +2088,10 @@ p {
   font-size: 28px;
   font-family: "Rotonda", Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
+  text-transform: none;
 }
 .project__title--screen {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-size: 18px;
   white-space: nowrap;
 }
@@ -2083,7 +2104,6 @@ p {
 }
 .project__text {
   margin-bottom: 20px;
-  margin-left: 30px;
 }
 .project__text p {
   font-size: 18px;
@@ -2143,7 +2163,7 @@ p {
 }
 .project__image {
   overflow: hidden;
-  border: 3px solid #4dd6fc;
+  border: 3px solid #039cc6;
   -webkit-transition: -webkit-transform 0.2s ease;
   transition: -webkit-transform 0.2s ease;
   -o-transition: transform 0.2s ease;
@@ -2155,6 +2175,9 @@ p {
 }
 .project__image--desktop {
   height: 250px;
+}
+.project__image img {
+  width: 100%;
 }
 .project__btn {
   position: relative;
@@ -2213,9 +2236,6 @@ p {
   }
   .project__subtitle {
     font-size: 20px;
-  }
-  .project__text {
-    margin-left: 20px;
   }
   .project__text p, .project__text li {
     font-size: 16px;
@@ -2285,6 +2305,8 @@ p {
 .example__link {
   position: relative;
   display: block;
+  overflow: hidden;
+  height: 100%;
   font-size: 20px;
   text-decoration: none;
   -webkit-transition: none;
@@ -2306,6 +2328,7 @@ p {
 .example__image {
   position: relative;
   display: block;
+  padding-top: 150%;
   background-color: #ffffff;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -2326,6 +2349,16 @@ p {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+.example__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .example__name {
   position: absolute;
@@ -2762,6 +2795,7 @@ p {
   }
   .contacts__title {
     margin-bottom: 20px;
+    font-size: 18px;
   }
   .contacts__list {
     display: -webkit-box;
@@ -2835,8 +2869,11 @@ p {
   height: 165px;
 }
 .form__btn {
-  margin-bottom: 15px;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   padding: 18px 15px;
+  border: 2px solid #4dd6fc;
 }
 .form__btn:hover {
   background-color: #005792;
@@ -2896,6 +2933,25 @@ p {
   .form__wrap {
     width: 250px;
   }
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+}
+
+.wpcf7-list-item {
+  margin: 0;
+  text-align: center;
+}
+
+.wpcf7-spinner {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .error {

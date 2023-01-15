@@ -18,14 +18,14 @@
 
     &-wrapper {
       align-items: stretch;
-      padding-bottom: 50px;
+      padding-bottom: 60px;
     }
 
     &-slide {
       display: flex;
       flex-direction: column;
       align-self: stretch;
-      height: 100%;
+      height: auto;
     }
 
     &-button-next, &-button-prev {
@@ -115,12 +115,9 @@
     position: relative;
     display: block;
     flex: 1;
+    width: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    min-height: 100%;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1rem;
     border: 4px solid $accent;
 
     &:hover {
@@ -143,9 +140,7 @@
   &__inner {
     position: relative;
     display: block;
-    width: 100%;
-    height: 100%;
-    background-color: $white;
+    padding-top: 150%;
     transition: all 0.5s ease;
 
     &::before {
@@ -159,6 +154,15 @@
       background: rgba($white, 0.25);
       transform: translate(-50%, -50%);
       transition: all 0.4s ease;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
     }
   }
 
@@ -198,6 +202,10 @@
       }
     }
 
+    // &__inner {
+    //   height: 520px;
+    // }
+
     &__name {
       position: static;
       padding: 10px;
@@ -209,14 +217,14 @@
   }
 
   @include tablets {
-    // &__item {
-    //   width: 240px;
+    // &__inner {
+    //   height: 380px;
     // }
   }
 
   @include phones {
-    // &__item {
-    //   width: 260px;
+    // &__inner {
+    //   height: 450px;
     // }
   }
 }

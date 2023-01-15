@@ -44,8 +44,11 @@
   }
 
   &__btn {
-    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
     padding: 18px 15px;
+    border: 2px solid #4dd6fc;
 
     &:hover {
       background-color: $default;
@@ -108,4 +111,19 @@
       width: 250px;
     }
   }
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+}
+.wpcf7-list-item {
+  margin: 0;
+  text-align: center;
+}
+.wpcf7-spinner {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
 }

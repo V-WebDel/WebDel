@@ -46,6 +46,8 @@
   &__link {
     position: relative;
     display: block;
+    overflow: hidden;
+    height: 100%;
     font-size: 20px;
     text-decoration: none;
     transition: none;
@@ -70,6 +72,7 @@
   &__image {
     position: relative;
     display: block;
+    padding-top: 150%;
     background-color: $white;
     transition: all 0.4s ease;
 
@@ -84,6 +87,15 @@
       background: rgba(0,0,0, 0.75);
       transform: translate(-50%, -50%);
       transition: all 0.4s ease;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 100%;
+      object-position: 50% 50%;
+      object-fit: cover;
     }
   }
 
@@ -126,7 +138,17 @@
     }
   }
 
+  @include tablets {
+    // &__image {
+    //   height: 380px;
+    // }
+  }
+
   @include phones {
     margin-bottom: 1.5rem;
+
+    // &__image {
+    //   height: 450px;
+    // }
   }
 }

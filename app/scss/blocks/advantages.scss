@@ -21,8 +21,10 @@
     &:hover {
       box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
 
-      .advantages__svg {
-        transform: scale(1.4);
+      .advantages__icon {
+        svg, img {
+          transform: scale(1.4);
+        }
       }
     }
   }
@@ -34,13 +36,19 @@
     width: 50px;
     height: 50px;
     margin-bottom: 30px;
-  }
 
-  &__svg {
-    fill: $default;
-    width: 50px;
-    height: 50px;
-    transition: $slowdown;
+    svg {
+      fill: $default;
+      width: 50px;
+      height: 50px;
+      transition: $slowdown;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      transition: $slowdown;
+    }
   }
 
   &__content {

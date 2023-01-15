@@ -46,6 +46,7 @@ document.addEventListener('keydown', (event) => {
 });
 
 
+
 /* Функции для модальных окон и отмена прокрутки документа */
 const cancelScroll = () => {
   let scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
@@ -98,6 +99,7 @@ let getTop = function getTop() {
 };
 
 
+
 /* Условие для элементов при прокрутке */
 let offset = 0;
 
@@ -140,6 +142,11 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+
+if (getTop() > 0) {
+  headerBlock.classList.add('header--scroll');
+}
+
 
 
 /* Анимация изображения макета на странице Проект */
@@ -280,14 +287,14 @@ if (body.classList.contains('page-portfolio')) {
     stagger: 0.4,
     ease: "power1",
   });
-  
 }
 
-// Swiper Works
+
+
+/* Swiper related project */
 let swiper_works = new Swiper('.swiper-works', {
   spaceBetween: 10,
   touchRatio: 1,
-  lazyLoading: true,
   observer: true,
   observeParents: true,
   loop: true,
@@ -295,10 +302,6 @@ let swiper_works = new Swiper('.swiper-works', {
 
   autoplay: {
     delay: 5000,
-  },
-
-  lazy: {
-    loadPrevNext: true,
   },
 
   navigation: {
