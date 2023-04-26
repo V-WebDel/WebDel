@@ -113,6 +113,8 @@
   }
 }
 
+
+/* For Contact Form 7 elements*/
 .wpcf7-form-control-wrap {
   display: block;
 }
@@ -126,4 +128,8 @@
   left: 50%;
   margin: 0;
   transform: translateX(-50%);
+}
+
+.wpcf7-response-output {
+  text-align: center;
 }

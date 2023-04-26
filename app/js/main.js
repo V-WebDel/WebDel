@@ -329,3 +329,60 @@ let swiper_works = new Swiper('.swiper-works', {
     }, 
   },
 });
+
+
+/* Маска для поля телефон (защита от "дурака") подмена +7 - 8 */
+const inputPhones = document.querySelectorAll('input[type=tel]');
+
+if(inputPhones.length > 0) {
+
+  inputPhones.forEach(input => {
+
+    input.addEventListener('input', ()=> {
+      let phoneMaskOutput = phoneMask(input.value);
+      input.value = phoneMaskOutput.str;
+    });
+
+  });
+
+  function phoneMask(str) { //Функция для автозаполнения поля 
+    let outputStr = '';
+    let strNum = str.replace(/[^0-9]/gim, '');
+
+    let literalPattern = /[0\*]/;
+    let numberPattern = /[0-9]/;
+
+    let mask = ['+7 (000) 000 - 0000', '8 (000) 000 - 0000'];
+    let maskType = 0;
+    let maxLength = 19;
+
+    if (strNum.length >= 1 && strNum[0] == 8) {
+      str = str.replace(/^8/, '7');
+    }
+
+    for (var strIndex = 0, maskIndex = 0; maskIndex < mask[maskType].length; ) {
+      if (maskIndex >= str.length) break;
+
+      if (
+        mask[maskType][maskIndex] == '0' &&
+        str[strIndex].match(numberPattern) == null
+      )
+        break;
+
+      while (mask[maskType][maskIndex].match(literalPattern) == null) {
+        if (str[strIndex] == mask[maskType][maskIndex]) break;
+
+        outputStr += mask[maskType][maskIndex++];
+      }
+
+      outputStr += str[strIndex++];
+      maskIndex++;
+    }
+
+    return {
+      str: outputStr,
+      maxLength: maxLength,
+      curLength: str.replace(/[^0-9]/gim, '').length,
+    };
+  }
+}

@@ -31,7 +31,6 @@
     font-size: 28px;
     font-family: $font-accent;
     letter-spacing: 1px;
-    text-transform: none;
 
     &--screen {
       margin-bottom: 0.75rem;
@@ -170,8 +169,6 @@
     }
 
     &__title {
-      font-size: 24px;
-
       &--screen {
         font-size: 20px;
       }

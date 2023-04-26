@@ -12,9 +12,24 @@ header.header
               +svg('business').menu__svg.menu__svg--business
               span.menu__name Резюме
           li.menu__item
+            span.arrow
             a.menu__link(href="portfolio.html")
               +svg('briefcas').menu__svg.menu__svg--briefcas
               span.menu__name Портфолио
+            ul.menu__list.menu__list--sub
+              li.menu__item
+                a.menu__link(href="resume.html")
+                  +svg('quiz').menu__svg.menu__svg--business
+                  span.menu__name Квизы
+              li.menu__item
+                a.menu__link(href="resume.html")
+                  +svg('landing').menu__svg.menu__svg--business
+                  span.menu__name Лендинги
+              li.menu__item
+                a.menu__link(href="resume.html")
+                  +svg('webpages').menu__svg.menu__svg--business
+                  span.menu__name Многостраничные
+
           li.menu__item
             a.menu__link(href="contacts.html")
               +svg('contact').menu__svg.menu__svg--contacts

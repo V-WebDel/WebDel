@@ -176,6 +176,10 @@
   @include tablets {
     padding-top: 70px;
 
+    &--full {
+      padding-bottom: 40px;
+    }
+
     &__circle { 
       &--1 {
         bottom: 10%;
